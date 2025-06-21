@@ -46,9 +46,14 @@
             const NewTheme = currentTheme === "dark" ? "light" : 'dark';
         document.documentElement.setAttribute("data-theme", newTheme);
         localStorage.setItem("prefferedTheme", newTheme);
-                }
+            }
+            </section>
+            <section>
+              <imgage id="main-image" src="images/image1.jpg" alt="First Year Image">
+            <p id="image-info">Image description here...</p>
+            <button onclick="changeImage('images/image1.jpg', 'First Year Image')">First Year</button>
+            <button onclick="changeImage('images/image2.jpg', 'Second Year Image')">Second Year</button>
         </script>
-
 function updateUsername90 {
     const params = new URL.SearchParams(window.location.search);
     Const name = params.get("user_Name");
