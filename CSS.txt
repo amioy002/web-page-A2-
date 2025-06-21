@@ -28,3 +28,37 @@ header {
   padding: 20px;
   text-align: center;
 }
+
+nav {
+  background-color: var(--secondary-color);
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav form {
+  margin-top: 10px;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
