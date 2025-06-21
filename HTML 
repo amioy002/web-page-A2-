@@ -35,7 +35,6 @@
             <p>HTML, CSS, time management, teamwork, and a lot more.This year has helped me grow both technically and personally.</p>
             </article.
         </main>
-
         <footer>
             <p>2025 by {OM AMIN} All right reserved.</p>
         </footer>
@@ -49,10 +48,14 @@
             }
             </section>
             <section>
-              <imgage id="main-image" src="images/image1.jpg" alt="First Year Image">
+              <image id="main-image" src="images/image1.jpg" alt="First Year Image">
             <p id="image-info">Image description here...</p>
             <button onclick="changeImage('images/image1.jpg', 'First Year Image')">First Year</button>
             <button onclick="changeImage('images/image2.jpg', 'Second Year Image')">Second Year</button>
+            /section>
+    </main>
+    <script src="scripts.js"></script>
+
         </script>
 function updateUsername90 {
     const params = new URL.SearchParams(window.location.search);
