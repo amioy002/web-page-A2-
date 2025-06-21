@@ -1,0 +1,30 @@
+:root {
+  --primary-color: #004080;
+  --secondary-color: #0066cc;
+  --bg-color: #f4f4f4;
+  --font-color: #333;
+  --heading-color: #002244;
+}
+
+[data-theme="dark"] {
+  --primary-color: #1e90ff;
+  --secondary-color: #00bfff;
+  --bg-color: #1a1a1a; 
+  --font-color: #f5f5f5;
+  --heading-color: #e0e0e0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
