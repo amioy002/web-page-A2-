@@ -84,3 +84,24 @@ function saveTodos() {
     localStorage.setItem('todos', JSON.stringify(todos));
     alert('To-Do list saved successfully!');
 }
+// Load saved todos
+function loadTodos() {
+    const todos = JSON.parse(localStorage.getItem('todos'));
+    if (todos) {
+        const todoList = document.getElementById('todo-list');
+        todoList.innerHTML = '';
+        for (const todo of todos) {
+            const todoItem = document.createElement('li');
+            todoItem.textContent = todo;
+            todoList.appendChild(todoItem);
+        }
+        alert('To-Do list loaded successfully!');
+    } else {
+        alert('No saved to-do list found.');
+    }
+}
+// Clear todos
+function clearTodos() {
+    document.getElementById('todo-list').innerHTML = '';
+    alert('To-Do list cleared!');
+}
