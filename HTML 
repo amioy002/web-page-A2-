@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en'>
+<head>
+    <Meta charset="UTF-8" />
+    <title>My First Year at University</title></html>
+    <link rel="stylesheet" href="styles.css'>
+    </head.
+    <body>
+        <header>
+            <h1>Hello,<span id="username'>Guest</span></h1>
+            <button onclick=""toggleTheme()">Toggle Theme </button>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">timetable</a></li>
+				
+                <li><a href="todo.html">learning Goals</a></li>
+           
+            </ul>
+            <form method="get">
+                <input type ="text" name="user_name' placeholder="Enter your name!" required />
+                <button type="submit'>Apply!</button>"
+            </form>
+        </nav>
+
+
+        <main>
+            <section>
+                <h2>Welcome to My First Year at University</h2>            
+                <p>
+                   My first year of university experiences, difficulties, and achievements are collected here.  I want to tell you about my experience and give you a glimpse of what it's like to be a first-year student.
+             </section>ß
+            <h3> my journey</h3>
+            <p>HTML, CSS, time management, teamwork, and a lot more.This year has helped me grow both technically and personally.</p>
+            </article.
+        </main>
+
+        <footer>
+            <p>2005 by {OM AMIN} All right reserved.</p>
+        </footer>
+
+        <script>
+            function toggleTheme() {
+            const currentTheme= document.documentElement.gerAttributed("data-theme");
+            const NewTheme = currentTheme === "dark" ? "light" : 'dark';
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("prefferedTheme", newTheme);
+                }
+        </script>
+
+function updateUsername90 {
+    const params = new URL.SearchParams(window.location.search);
+    Const name = params.get("user_Name");
+}
+if (name) {
+    document.getElementById("userName").textContent = name;
+    localStorage.SetItem("storedUserName, name");
+
+} else
+const stored=LocalStorage.getItem("storedUserName");
+if (Stored){
+    document.getElementById("userName").textContent = stored;
+
+}
+window.onload = function () {
+    const savedTheme= localStorage.getItem("preferredTheme");
+    document.documentElement.setAttribute("data-theme", savedTheme || "light");
+
+    const now = new Date ();
+    const footer = document.querySelector("footer");
+    const timePara = document.createElement("p");
+    timePara.textContent = "current time and date: " + now.tolocalString();
+    footer.appendChild(timepara);
+
+    updateUserName();
+};
+</script>
+
+</body>
+</html>
