@@ -1,39 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>My Courses</h1>
+    <Meta charset="UTF-8" />
+    <title>My First Year at University</title></html>
+    <link rel="stylesheet" href="styles.css'>
+    </head.
+    <body>
+        <header>
+            <h1>Hello,<span id="username'>Guest</span></h1>
+            <button onclick=""toggleTheme()">Toggle Theme </button>
+        </header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="todo.html">To-Do List</a></li>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">timetable</a></li>
+				
+                <li><a href="todo.html">learning Goals</a></li>
+           
             </ul>
+            <form method="get">
+                <input type ="text" name="user_name' placeholder="Enter your name!" required />
+                <button type="submit'>Apply!</button>"
+            </form
         </nav>
-        <button onclick="toggleTheme()">Toggle Theme</button>
-        <div id="date-time"></div>
-        <form id="name-form" action="courses.html" method="GET">
-            <input type="text" name="user_name" placeholder="Enter your name">
-            <button type="submit">Submit</button>
-        </form>
-    </header>
-     <main>
-        <section>
-            <h2>Course List</h2>
-            <ul>
-                <li>INFT 1016 - Introduction to Programming</li>
-                <li>MATH 1010 - Calculus I</li>
-                <li>ENG 1001 - Engineering Fundamentals</li>
-                <!-- Add more courses as needed -->
-            </ul>
-        </section>
-    </main>
+        <main>
+            <section>
+                <h2>Welcome to My First Year at University</h2>            
+                <p>
+                   My first year of university experiences, difficulties, and achievements are collected here.  I want to tell you about my experience and give you a glimpse of what it's like to be a first-year student.
+             </section>ß
+            <h3> my journey</h3>
+            <p>HTML, CSS, time management, teamwork, and a lot more.This year has helped me grow both technically and personally.</p>
+            </article.
+        </main>
+        <footer>
+            <p>2025 by {OM AMIN} All right reserved.</p>
+        </footer>
+
+        <script>
+            function toggleTheme() {
+            const currentTheme= document.documentElement.gerAttributed("data-theme");
+            const NewTheme = currentTheme === "dark" ? "light" : 'dark';
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("prefferedTheme", newTheme);
+            }
+            </section>
+            <section>
+              <image id="main-image" src="images/image1.jpg" alt="First Year Image">
+            <p id="image-info">Image description here...</p>
+            <button onclick="changeImage('images/image1.jpg', 'First Year Image')">First Year</button>
+            <button onclick="changeImage('images/image2.jpg', 'Second Year Image')">Second Year</button>
+            /section>
+    
+        </script>
+function updateUsername90 {
+    const params = new URL.SearchParams(window.location.search);
+    Const name = params.get("user_Name");
+}
+if (name) {
+    document.getElementById("userName").textContent = name;
+    localStorage.SetItem("storedUserName, name");
+
+} else
+const stored=LocalStorage.getItem("storedUserName");
+if (Stored){
+    document.getElementById("userName").textContent = stored;
+
+}
+window.onload = function () {
+    const savedTheme= localStorage.getItem("preferredTheme");
+    document.documentElement.setAttribute("data-theme", savedTheme || "light");
+
+    const now = new Date ();
+    const footer = document.querySelector("footer");
+    const timePara = document.createElement("p");
+    timePara.textContent = "current time and date: " + now.tolocalString();
+    footer.appendChild(timepara);
+
+    updateUserName();
+};
+</script>
+</main>
     <script src="scripts.js"></script>
 </body>
 </html>
