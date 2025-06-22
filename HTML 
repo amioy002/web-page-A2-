@@ -21,7 +21,7 @@
             <form method="get">
                 <input type ="text" name="user_name' placeholder="Enter your name!" required />
                 <button type="submit'>Apply!</button>"
-            </form>
+            </form
         </nav>
 
 
@@ -53,9 +53,7 @@
             <button onclick="changeImage('images/image1.jpg', 'First Year Image')">First Year</button>
             <button onclick="changeImage('images/image2.jpg', 'Second Year Image')">Second Year</button>
             /section>
-    </main>
-    <script src="scripts.js"></script>
-
+    
         </script>
 function updateUsername90 {
     const params = new URL.SearchParams(window.location.search);
@@ -84,6 +82,7 @@ window.onload = function () {
     updateUserName();
 };
 </script>
-
+</main>
+    <script src="scripts.js"></script>
 </body>
 </html>
