@@ -1,86 +1,88 @@
 <!DOCTYPE html>
-<html lang="en'>
+<html lang="en">
 <head>
-    <Meta charset="UTF-8" />
-    <title>My First Year at University</title></html>
-    <link rel="stylesheet" href="styles.css'>
-    </head.
-    <body>
-        <header>
-            <h1>Hello,<span id="username'>Guest</span></h1>
-            <button onclick=""toggleTheme()">Toggle Theme </button>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="about.html">timetable</a></li>
-				
-                <li><a href="todo.html">learning Goals</a></li>
-           
-            </ul>
-            <form method="get">
-                <input type ="text" name="user_name' placeholder="Enter your name!" required />
-                <button type="submit'>Apply!</button>"
-            </form
-        </nav>
-        <main>
-            <section>
-                <h2>Welcome to My First Year at University</h2>            
-                <p>
-                   My first year of university experiences, difficulties, and achievements are collected here.  I want to tell you about my experience and give you a glimpse of what it's like to be a first-year student.
-             </section>ß
-            <h3> my journey</h3>
-            <p>HTML, CSS, time management, teamwork, and a lot more.This year has helped me grow both technically and personally.</p>
-            </article.
-        </main>
-        <footer>
-            <p>2025 by {OM AMIN} All right reserved.</p>
-        </footer>
-
-        <script>
-            function toggleTheme() {
-            const currentTheme= document.documentElement.gerAttributed("data-theme");
-            const NewTheme = currentTheme === "dark" ? "light" : 'dark';
-        document.documentElement.setAttribute("data-theme", newTheme);
-        localStorage.setItem("prefferedTheme", newTheme);
-            }
-            </section>
-            <section>
-              <image id="main-image" src="images/image1.jpg" alt="First Year Image">
+    <meta charset="UTF-8" />
+    <title>My First Year at University</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hello, <span id="username">Guest</span></h1>
+        <button onclick="toggleTheme()">Toggle Theme</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Timetable</a></li>
+            <li><a href="todo.html">Learning Goals</a></li>
+        </ul>
+        <form method="get">
+            <input type="text" name="user_name" placeholder="Enter your name!" required />
+            <button type="submit">Apply!</button>
+        </form>
+    </nav>
+    <main>
+        <section>
+            <h2>Welcome to My First Year at University</h2>            
+            <p>
+                My first year of university experiences, difficulties, and achievements are collected here. I want to tell you about my experience and give you a glimpse of what it's like to be a first-year student.
+            </p>
+        </section>
+        <section>
+            <h3>My Journey</h3>
+            <p>HTML, CSS, time management, teamwork, and a lot more. This year has helped me grow both technically and personally.</p>
+        </section>
+        <section>
+            <img id="main-image" src="images/image1.jpg" alt="First Year Image">
             <p id="image-info">Image description here...</p>
             <button onclick="changeImage('images/image1.jpg', 'First Year Image')">First Year</button>
             <button onclick="changeImage('images/image2.jpg', 'Second Year Image')">Second Year</button>
-            /section>
-    
-        </script>
-function updateUsername90 {
-    const params = new URL.SearchParams(window.location.search);
-    Const name = params.get("user_Name");
-}
-if (name) {
-    document.getElementById("userName").textContent = name;
-    localStorage.SetItem("storedUserName, name");
+        </section>
+    </main>
+    <footer>
+        <p>2025 by {OM AMIN} All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("preferredTheme", newTheme);
+        }
 
-} else
-const stored=LocalStorage.getItem("storedUserName");
-if (Stored){
-    document.getElementById("userName").textContent = stored;
+        function changeImage(src, alt) {
+            document.getElementById("main-image").src = src;
+            document.getElementById("main-image").alt = alt;
+            document.getElementById("image-info").textContent = alt;
+        }
 
-}
-window.onload = function () {
-    const savedTheme= localStorage.getItem("preferredTheme");
-    document.documentElement.setAttribute("data-theme", savedTheme || "light");
+        function updateUsername() {
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get("user_name");
+            if (name) {
+                document.getElementById("username").textContent = name;
+                localStorage.setItem("storedUserName", name);
+            } else {
+                const stored = localStorage.getItem("storedUserName");
+                if (stored) {
+                    document.getElementById("username").textContent = stored;
+                }
+            }
+        }
 
-    const now = new Date ();
-    const footer = document.querySelector("footer");
-    const timePara = document.createElement("p");
-    timePara.textContent = "current time and date: " + now.tolocalString();
-    footer.appendChild(timepara);
+        window.onload = function () {
+            const savedTheme = localStorage.getItem("preferredTheme");
+            document.documentElement.setAttribute("data-theme", savedTheme || "light");
 
-    updateUserName();
-};
-</script>
-</main>
+            const now = new Date();
+            const footer = document.querySelector("footer");
+            const timePara = document.createElement("p");
+            timePara.textContent = "Current time and date: " + now.toLocaleString();
+            footer.appendChild(timePara);
+
+            updateUsername();
+        };
+    </script>
     <script src="scripts.js"></script>
 </body>
 </html>
